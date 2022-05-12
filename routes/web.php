@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[Contactcontroller::class,'form_contact']);
+Route::post('/save-contact',[Contactcontroller::class,'creat_form']);

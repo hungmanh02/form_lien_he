@@ -10,7 +10,13 @@
 <body>
     <div class="container">
 
-        <form action="form_contact.php" method="POST">
+        <form action="{{ URL::to('/save-contact') }}" method="POST" enctype="multipart/form-data">
+          @csrf
+          <?php $message=Session::get('message');
+                        if($message){
+                            echo $message;
+                            Session::put('message',null);
+                        }  ?> 
           
           <div class="form-group">
             <label for="exampleInputName">Họ và Tên</label>
