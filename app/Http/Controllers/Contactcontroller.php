@@ -23,5 +23,6 @@ class Contactcontroller extends Controller
         $contact->save();
         Session::put('message','thêm liên hệ thành công');
         return Redirect::to('/');
+        
     }
 }
